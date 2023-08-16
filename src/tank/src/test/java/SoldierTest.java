@@ -20,7 +20,6 @@ public class SoldierTest {
         assertTrue(soldier1.isAlive());
     }
 
-
     @Test
     public void soldier_isAlive_false_test()
     {

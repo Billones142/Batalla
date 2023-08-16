@@ -1,39 +1,14 @@
 package battle2023.ucp;
 
-public class Soldier {
+public class Soldier 
+extends MilitaryAsset {
+    public Soldier() {
+        super();
+    }
     
-    private int health = 5;
-    private String name;
-
-///////////////// INICIO ENCAPSULACION /////////////////
-    private int getHealth(){
-        return health;
-    }
-
-    private void setHealth(int value){
-        health= value;
-    }
-
-    private String getName(){
-        return name;
-    }
-
-    private void setName(String value){
-        name= value;
-    }
-///////////////// FIN ENCAPSULACION /////////////////
-
-    public boolean isAlive() {
-        return getHealth() > 0;
-    }
-
-    public void damage(int amount) {
-        setHealth(getHealth() - amount);
-        return;
-    }
-
-    public void heal(int amount) {
-        setHealth(getHealth() + amount);
-        return;
+    @Override
+    public void damage(int amount){
+        amount= amount/2;
+        super.damage((int)amount);
     }
 }

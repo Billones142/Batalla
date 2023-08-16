@@ -1,27 +1,14 @@
 package battle2023.ucp;
 
-public class Tank {
+public class Tank 
+extends MilitaryAsset {
+    public Tank() {
+        super();
+    }
 
-    private int health = 5;
-    private String name= "";
     private Soldier pilot= null;
 
 ///////////////// INICIO ENCAPSULACION /////////////////
-    private int getHealth(){
-        return health;
-    }
-
-    private void setHealth(int value){
-        health= value;
-    }
-
-    private String getName(){
-        return name;
-    }
-
-    private void setName(String value){
-        name= value;
-    }
 
     private Soldier getSoldier(){
         return pilot;
@@ -31,8 +18,12 @@ public class Tank {
         pilot= value;
     }
 
-    public void setPilot() {
-        pilot= new Soldier();
+    public void setPilot(Soldier value) {
+        pilot= value;
+    }
+
+    public Soldier getPilot(){
+        return pilot;
     }
 
 ///////////////// FIN ENCAPSULACION /////////////////
