@@ -4,7 +4,7 @@ public class Tank {
 
     private int health = 5;
     private String name= "";
-    private Soldier pilot= new Soldier();
+    private Soldier pilot= null;
 
 ///////////////// INICIO ENCAPSULACION /////////////////
     private int getHealth(){
@@ -29,6 +29,10 @@ public class Tank {
 
     private void setSoldier(Soldier value){
         pilot= value;
+    }
+
+    public void setPilot() {
+        pilot= new Soldier();
     }
 
 ///////////////// FIN ENCAPSULACION /////////////////
@@ -56,5 +60,9 @@ public class Tank {
         if(getHealth() > 0){
             setHealth(getHealth()+amount);
         }
+    }
+
+    public boolean hasPilot() {
+        return pilot != null;
     }
 }

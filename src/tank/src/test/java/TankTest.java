@@ -56,4 +56,13 @@ public class TankTest
         assertEquals(false, tank1.isAlive());
     }
 
+    @Test
+    public void hasPilot_test()
+    {
+        Tank tank1= new Tank();
+
+        assertEquals(false, tank1.hasPilot());
+        tank1.setPilot();
+        assertEquals(true, tank1.hasPilot());
+    }
 }
