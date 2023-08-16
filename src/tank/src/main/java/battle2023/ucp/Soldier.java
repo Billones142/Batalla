@@ -1,10 +1,9 @@
 package battle2023.ucp;
 
-public class Tank {
-
+public class Soldier {
+    
     private int health = 5;
-    private String name= "";
-    private Soldier pilot= new Soldier();
+    private int name= null;
 
 ///////////////// INICIO ENCAPSULACION /////////////////
     private int getHealth(){
@@ -33,17 +32,8 @@ public class Tank {
         return;
     }
 
-    public void repair() {
-        if (getHealth() == 0){
-            setHealth(5);
-        }
+    public void heal(int amount) {
+        setHealth(getHealth() + amount);
         return;
-    }
-
-    public void reinforce(int amount) 
-    {
-        if(getHealth() > 0){
-            setHealth(getHealth()+amount)
-        }
     }
 }
