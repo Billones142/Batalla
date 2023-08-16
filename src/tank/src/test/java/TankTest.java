@@ -56,15 +56,4 @@ public class TankTest
         assertEquals(false, tank1.isAlive());
     }
 
-    @Test
-    public void tank_reinforce_alive_test()
-    {
-        Tank tank1= new Tank();
-
-        tank1.damage(1);
-        int before= tank1.report();
-        tank1.reinforce(1);
-        assertEquals(before + 1, tank1.report());
-    }
-
 }

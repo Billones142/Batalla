@@ -43,7 +43,7 @@ public class Tank {
     public void reinforce(int amount) 
     {
         if(getHealth() > 0){
-            setHealth(getHealth()+amount)
+            setHealth(getHealth()+amount);
         }
     }
 }

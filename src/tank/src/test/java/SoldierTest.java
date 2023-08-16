@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import battle2023.ucp.Pilot;
+import battle2023.ucp.Soldier;
 
 public class SoldierTest {
     @Test
@@ -39,7 +39,7 @@ public class SoldierTest {
 
         soldier1.damage(5);
         assertEquals(false, soldier1.isAlive());
-        soldier1.repair();
+        soldier1.heal(5);
         assertEquals(true, soldier1.isAlive());
     }
 

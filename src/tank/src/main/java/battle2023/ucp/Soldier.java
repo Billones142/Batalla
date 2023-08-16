@@ -3,7 +3,7 @@ package battle2023.ucp;
 public class Soldier {
     
     private int health = 5;
-    private int name= null;
+    private String name;
 
 ///////////////// INICIO ENCAPSULACION /////////////////
     private int getHealth(){
