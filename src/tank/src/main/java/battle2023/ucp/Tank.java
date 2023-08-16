@@ -22,7 +22,18 @@ public class Tank {
     private void setName(String value){
         name= value;
     }
+
+    private Soldier getSoldier(){
+        return pilot;
+    }
+
+    private void setSoldier(Soldier value){
+        pilot= value;
+    }
+
 ///////////////// FIN ENCAPSULACION /////////////////
+
+
 
     public boolean isAlive() {
         return getHealth() > 0;
