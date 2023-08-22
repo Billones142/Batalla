@@ -7,35 +7,41 @@ public abstract class MilitaryAsset {
 
 ///////////////// INICIO ENCAPSULACION /////////////////
 
-    protected int getHealth(){
+    protected int getHealth()
+    {
         return health;
     }
 
-    protected void setHealth(int value){
+    protected void setHealth(int value)
+    {
         health= value;
     }
 
-    private String getName(){
+    protected String getName()
+    {
         return name;
     }
 
-    private void setName(String value){
-
+    protected void setName(String value)
+    {
         name= value;
     }
 
 ///////////////// FIN ENCAPSULACION /////////////////
 
-    public boolean isAlive() {
+    public boolean isAlive()
+    {
         return getHealth() > 0;
     }
 
-    public void damage(int amount) {
+    public void damage(int amount)
+    {
         setHealth(getHealth() - amount);
         return;
     }
 
-    public void heal(int amount) {
+    public void heal(int amount)
+    {
         setHealth(getHealth() + amount);
         return;
     }
