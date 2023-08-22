@@ -45,6 +45,13 @@ extends MilitaryAsset
     }
 
     @Override
+    public void damage(int amount)
+    {
+        setHealth((getHealth() - amount)/2);
+        return;
+    }
+
+    @Override
     public void attack(MilitaryAsset target)
     {
         target.damage(3);

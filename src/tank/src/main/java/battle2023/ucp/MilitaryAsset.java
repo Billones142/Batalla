@@ -2,7 +2,7 @@ package battle2023.ucp;
 
 public abstract class MilitaryAsset {
         
-    private int health = 5;
+    private int health;
     private String name;
 
     public MilitaryAsset() {
