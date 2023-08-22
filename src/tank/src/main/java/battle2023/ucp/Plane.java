@@ -5,5 +5,7 @@ extends MilitaryAsset{
     public Plane() {
         super();
     }
+
+    
     
 }
