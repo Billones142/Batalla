@@ -18,7 +18,6 @@ public class TankTest
 
         tank1.damage(1);
 
-        assertEquals(true, tank1.isAlive());
         assertTrue(tank1.isAlive());
     }
 
@@ -29,7 +28,6 @@ public class TankTest
 
         tank1.damage(5);
 
-        assertEquals(false, tank1.isAlive());
         assertFalse(tank1.isAlive());
     }
 
@@ -39,9 +37,9 @@ public class TankTest
         Tank tank1 = new Tank();
 
         tank1.damage(5);
-        assertEquals(false, tank1.isAlive());
+        assertFalse(tank1.isAlive());
         tank1.repair();
-        assertEquals(true, tank1.isAlive());
+        assertTrue(tank1.isAlive());
     }
 
     @Test
@@ -50,10 +48,10 @@ public class TankTest
         Tank tank1= new Tank();
 
         tank1.damage(5);
-        assertEquals(false, tank1.isAlive());
+        assertFalse(tank1.isAlive());
 
         tank1.reinforce(1);
-        assertEquals(false, tank1.isAlive());
+        assertFalse(tank1.isAlive());
     }
 
     @Test
@@ -62,9 +60,9 @@ public class TankTest
         Tank tank1= new Tank();
         Soldier soldier1= new Soldier();
 
-        assertEquals(false, tank1.hasPilot());
+        assertFalse(tank1.hasPilot());
         tank1.setPilot(soldier1);
-        assertEquals(true, tank1.hasPilot());
+        assertTrue(tank1.hasPilot());
     }
 
     @Test
@@ -75,7 +73,21 @@ public class TankTest
 
         assertEquals(false, tank1.hasPilot());
         tank1.setPilot(soldier1);
-        assertEquals(true, tank1.hasPilot());
+        assertTrue(tank1.hasPilot());
         assertEquals(soldier1, tank1.getPilot());
+    }
+
+    @Test
+    public void tank_attack_test()
+    {
+        Soldier soldier1= new Soldier();
+        Tank tank1= new Tank();
+
+        assertEquals(true, soldier1.isAlive());
+        for(int i= 0; i < 2 ; i++)
+        {
+            tank1.attack(soldier1);
+        }
+        assertFalse(soldier1.isAlive());
     }
 }

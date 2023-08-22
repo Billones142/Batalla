@@ -12,6 +12,18 @@ extends MilitaryAsset
     private Soldier pilot= null;
 
 
+    ///////////////// INICIO ENCAPSULACION /////////////////
+
+    public Soldier getPilot(){
+        return pilot;
+    }
+
+    public void setPilot(Soldier value){
+        pilot= value;
+    }
+
+    ///////////////// FIN ENCAPSULACION /////////////////
+
     public void repair()
     {
         if (getHealth() == 0){
@@ -30,5 +42,11 @@ extends MilitaryAsset
     public boolean hasPilot() 
     {
         return pilot != null;
+    }
+
+    @Override
+    public void attack(MilitaryAsset target)
+    {
+        target.damage(3);
     }
 }

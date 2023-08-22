@@ -5,6 +5,12 @@ public abstract class MilitaryAsset {
     private int health = 5;
     private String name;
 
+    public MilitaryAsset() {
+        super();
+        setName("x");
+        setHealth(5);
+    }
+
 ///////////////// INICIO ENCAPSULACION /////////////////
 
     protected int getHealth()
@@ -44,5 +50,10 @@ public abstract class MilitaryAsset {
     {
         setHealth(getHealth() + amount);
         return;
+    }
+
+    public void attack(MilitaryAsset target)
+    {
+        target.damage(1);
     }
 }

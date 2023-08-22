@@ -7,11 +7,4 @@ extends MilitaryAsset
     {
         super();
     }
-    
-    @Override
-    public void damage(int amount)
-    {
-        amount= amount/2;
-        super.damage((int)amount);
-    }
 }

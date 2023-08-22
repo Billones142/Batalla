@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import battle2023.ucp.Soldier;
+import battle2023.ucp.Tank;
 
 public class SoldierTest {
     @Test
@@ -16,7 +17,6 @@ public class SoldierTest {
 
         soldier1.damage(1);
 
-        assertEquals(true, soldier1.isAlive());
         assertTrue(soldier1.isAlive());
     }
 
@@ -27,7 +27,6 @@ public class SoldierTest {
 
         soldier1.damage(5);
 
-        assertEquals(false, soldier1.isAlive());
         assertFalse(soldier1.isAlive());
     }
 
@@ -37,9 +36,24 @@ public class SoldierTest {
         Soldier soldier1 = new Soldier();
 
         soldier1.damage(5);
-        assertEquals(false, soldier1.isAlive());
+        assertFalse(soldier1.isAlive());
         soldier1.heal(5);
-        assertEquals(true, soldier1.isAlive());
+        assertTrue(soldier1.isAlive());
+    }
+
+    @Test
+    public void soldier_attack_test()
+    {
+        Soldier soldier1= new Soldier();
+        Tank tank1= new Tank();
+
+        assertTrue(tank1.isAlive());
+        for(int i= 0; i < 5 ; i++)
+        {
+            soldier1.attack(tank1);
+        }
+        
+        assertFalse(tank1.isAlive());
     }
 
 }
