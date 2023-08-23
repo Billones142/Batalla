@@ -1,4 +1,4 @@
-package battle2023.ucp;
+package battle2023.ucp.Entities;
 
 public class Plane 
 extends MilitaryAsset{

@@ -6,8 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import battle2023.ucp.Soldier;
-import battle2023.ucp.Tank;
+import battle2023.ucp.Entities.Soldier;
+import battle2023.ucp.Entities.Tank;
 
 public class SoldierTest {
     @Test
@@ -54,9 +54,34 @@ public class SoldierTest {
             soldier1.attack(tank1);
         }
         assertTrue(tank1.isAlive());
-        
+
         soldier1.attack(tank1);
         assertFalse(tank1.isAlive());
+    }
+
+    @Test
+    public void damage_percentage_test(){
+        Soldier soldier1= new Soldier();
+
+        assertTrue(soldier1.isAlive());
+        
+        soldier1.damage(5.0,50.0);
+        assertTrue(soldier1.isAlive());
+
+        soldier1.damage(5.0,50.0);
+        assertFalse(soldier1.isAlive());
+
+    }
+
+    @Test
+    public void damage_test(){
+        Soldier soldier1= new Soldier();
+
+        assertTrue(soldier1.isAlive());
+        
+        soldier1.damage(5.0);
+        assertFalse(soldier1.isAlive());
+
     }
 
 }

@@ -1,4 +1,4 @@
-package battle2023.ucp;
+package battle2023.ucp.Entities;
 
 public abstract class MilitaryAsset {
         
@@ -40,10 +40,14 @@ public abstract class MilitaryAsset {
         return getHealth() > 0;
     }
 
+    public void damage(Double amount, Double percentage)
+    {
+        setHealth(getHealth() - (amount*(percentage/100)));
+}
+
     public void damage(Double amount)
     {
-        setHealth(getHealth() - amount);
-        return;
+        damage(amount, 100.0);
     }
 
     public void heal(Double amount)

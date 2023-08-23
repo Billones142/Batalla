@@ -6,8 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import battle2023.ucp.Soldier;
-import battle2023.ucp.Tank;
+import battle2023.ucp.Entities.Soldier;
+import battle2023.ucp.Entities.Tank;
 
 public class TankTest 
 {
