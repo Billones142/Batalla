@@ -27,7 +27,7 @@ extends MilitaryAsset
     public void repair()
     {
         if (getHealth() == 0){
-            setHealth(5);
+            setHealth(5.0);
         }
         return;
     }

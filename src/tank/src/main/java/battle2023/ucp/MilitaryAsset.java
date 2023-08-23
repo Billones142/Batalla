@@ -2,23 +2,23 @@ package battle2023.ucp;
 
 public abstract class MilitaryAsset {
         
-    private int health;
+    private Double health;
     private String name;
 
     public MilitaryAsset() {
         super();
         setName("x");
-        setHealth(5);
+        setHealth(5.0);
     }
 
 ///////////////// INICIO ENCAPSULACION /////////////////
 
-    protected int getHealth()
+    protected double getHealth()
     {
         return health;
     }
 
-    protected void setHealth(int value)
+    protected void setHealth(Double value)
     {
         health= value;
     }
