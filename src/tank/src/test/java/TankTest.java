@@ -16,7 +16,7 @@ public class TankTest
     {
         Tank tank1 = new Tank();
 
-        tank1.damage(1);
+        tank1.damage(1.0);
 
         assertTrue(tank1.isAlive());
     }
@@ -26,7 +26,7 @@ public class TankTest
     {
         Tank tank1 = new Tank();
 
-        tank1.damage(5);
+        tank1.damage(10.0);
 
         assertFalse(tank1.isAlive());
     }
@@ -36,7 +36,7 @@ public class TankTest
     {
         Tank tank1 = new Tank();
 
-        tank1.damage(5);
+        tank1.damage(10.0);
         assertFalse(tank1.isAlive());
         tank1.repair();
         assertTrue(tank1.isAlive());
@@ -47,10 +47,10 @@ public class TankTest
     {
         Tank tank1= new Tank();
 
-        tank1.damage(5);
+        tank1.damage(10.0);
         assertFalse(tank1.isAlive());
 
-        tank1.reinforce(1);
+        tank1.reinforce(1.0);
         assertFalse(tank1.isAlive());
     }
 
@@ -83,11 +83,10 @@ public class TankTest
         Soldier soldier1= new Soldier();
         Tank tank1= new Tank();
 
-        assertEquals(true, soldier1.isAlive());
-        for(int i= 0; i < 2 ; i++)
-        {
-            tank1.attack(soldier1);
-        }
+        assertTrue(soldier1.isAlive());
+        tank1.attack(soldier1);
+        assertTrue(soldier1.isAlive());
+        tank1.attack(soldier1);
         assertFalse(soldier1.isAlive());
     }
 }

@@ -32,12 +32,13 @@ extends MilitaryAsset
         return;
     }
 
-    public void reinforce(int amount)
+    public void reinforce(Double amount)
     {
         if(getHealth() > 0){
             setHealth(getHealth()+amount);
         }
     }
+
 
     public boolean hasPilot() 
     {
@@ -45,15 +46,15 @@ extends MilitaryAsset
     }
 
     @Override
-    public void damage(int amount)
+    public void damage(Double amount)
     {
-        setHealth((getHealth() - amount)/2);
-        return;
+        setHealth(getHealth() - (amount/2));
     }
+    
 
     @Override
     public void attack(MilitaryAsset target)
     {
-        target.damage(3);
+        target.damage(3.0);
     }
 }

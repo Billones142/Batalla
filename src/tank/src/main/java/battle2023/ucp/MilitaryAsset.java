@@ -40,13 +40,13 @@ public abstract class MilitaryAsset {
         return getHealth() > 0;
     }
 
-    public void damage(int amount)
+    public void damage(Double amount)
     {
         setHealth(getHealth() - amount);
         return;
     }
 
-    public void heal(int amount)
+    public void heal(Double amount)
     {
         setHealth(getHealth() + amount);
         return;
@@ -54,6 +54,6 @@ public abstract class MilitaryAsset {
 
     public void attack(MilitaryAsset target)
     {
-        target.damage(1);
+        target.damage(1.0);
     }
 }

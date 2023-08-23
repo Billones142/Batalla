@@ -15,7 +15,7 @@ public class SoldierTest {
     {
         Soldier soldier1 = new Soldier();
 
-        soldier1.damage(1);
+        soldier1.damage(1.0);
 
         assertTrue(soldier1.isAlive());
     }
@@ -25,7 +25,7 @@ public class SoldierTest {
     {
         Soldier soldier1 = new Soldier();
 
-        soldier1.damage(5);
+        soldier1.damage(5.0);
 
         assertFalse(soldier1.isAlive());
     }
@@ -35,9 +35,9 @@ public class SoldierTest {
     {
         Soldier soldier1 = new Soldier();
 
-        soldier1.damage(5);
+        soldier1.damage(5.0);
         assertFalse(soldier1.isAlive());
-        soldier1.heal(5);
+        soldier1.heal(5.0);
         assertTrue(soldier1.isAlive());
     }
 
@@ -48,11 +48,14 @@ public class SoldierTest {
         Tank tank1= new Tank();
 
         assertTrue(tank1.isAlive());
-        for(int i= 0; i < 5 ; i++)
+        
+        for(int i= 0; i < 9 ; i++)
         {
             soldier1.attack(tank1);
         }
+        assertTrue(tank1.isAlive());
         
+        soldier1.attack(tank1);
         assertFalse(tank1.isAlive());
     }
 
