@@ -13,7 +13,7 @@ public class SoldierTest {
     @Test
     public void soldier_isAlive_true_test()
     {
-        Soldier soldier1 = new Soldier();
+        Soldier soldier1 = new Soldier("juan",5.0);
 
         soldier1.damage(1.0);
 
@@ -23,7 +23,7 @@ public class SoldierTest {
     @Test
     public void soldier_isAlive_false_test()
     {
-        Soldier soldier1 = new Soldier();
+        Soldier soldier1 = new Soldier("juan",5.0);
 
         soldier1.damage(5.0);
 
@@ -33,7 +33,7 @@ public class SoldierTest {
     @Test
     public void soldier_heal_dead_test()
     {
-        Soldier soldier1 = new Soldier();
+        Soldier soldier1 = new Soldier("juan",5.0);
 
         soldier1.damage(5.0);
         assertFalse(soldier1.isAlive());
@@ -44,7 +44,7 @@ public class SoldierTest {
     @Test
     public void soldier_attack_test()
     {
-        Soldier soldier1= new Soldier();
+        Soldier soldier1= new Soldier("juan",5.0);
         Tank tank1= new Tank();
 
         assertTrue(tank1.isAlive());
@@ -61,7 +61,7 @@ public class SoldierTest {
 
     @Test
     public void damage_percentage_test(){
-        Soldier soldier1= new Soldier();
+        Soldier soldier1= new Soldier("juan",5.0);
 
         assertTrue(soldier1.isAlive());
         
@@ -75,7 +75,7 @@ public class SoldierTest {
 
     @Test
     public void damage_test(){
-        Soldier soldier1= new Soldier();
+        Soldier soldier1= new Soldier("juan",5.0);
 
         assertTrue(soldier1.isAlive());
         
@@ -83,5 +83,8 @@ public class SoldierTest {
         assertFalse(soldier1.isAlive());
 
     }
+
+    @Test
+    public void 
 
 }
