@@ -1,4 +1,4 @@
-package battle2023.ucp.interfaces;
+package battle2023.ucp.Interfaces;
 
 import battle2023.ucp.Entities.MilitaryAsset;
 
