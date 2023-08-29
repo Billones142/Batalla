@@ -4,7 +4,7 @@ public abstract class MilitaryAsset {
         
     private Double health;
     private String name;
-    private ShieldBase shield;
+    private ShieldBase shield= new ShieldRandomPercentage("escudo", 100.0);
 
     public MilitaryAsset() {
         super();
@@ -43,9 +43,9 @@ public abstract class MilitaryAsset {
 
     public void damage(Double amount, Double percentage)
     {
-        if (Shield.canUse()) {
+        /*if (Shield.canUse()) {
             setHealth(getHealth() - (amount*(percentage/100)));
-        }
+        }*/
         setHealth(getHealth() - (amount*(percentage/100)));
     }
 

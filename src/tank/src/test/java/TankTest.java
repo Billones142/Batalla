@@ -58,7 +58,7 @@ public class TankTest
     public void hasPilot_test()
     {
         Tank tank1= new Tank();
-        Soldier soldier1= new Soldier();
+        Soldier soldier1= new Soldier("soldier1", 5.0);
 
         assertFalse(tank1.hasPilot());
         tank1.setPilot(soldier1);
@@ -69,7 +69,7 @@ public class TankTest
     public void setPilot_test()
     {
         Tank tank1= new Tank();
-        Soldier soldier1= new Soldier();
+        Soldier soldier1= new Soldier("soldier1", 5.0);
 
         assertEquals(false, tank1.hasPilot());
         tank1.setPilot(soldier1);
@@ -80,7 +80,7 @@ public class TankTest
     @Test
     public void tank_attack_test()
     {
-        Soldier soldier1= new Soldier();
+        Soldier soldier1= new Soldier("soldier1", 5.0);
         Tank tank1= new Tank();
 
         assertTrue(soldier1.isAlive());

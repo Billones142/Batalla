@@ -9,7 +9,8 @@ import org.junit.Test;
 import battle2023.ucp.Entities.Soldier;
 import battle2023.ucp.Entities.Tank;
 
-public class SoldierTest {
+public class SoldierTest
+{
     @Test
     public void soldier_isAlive_true_test()
     {
@@ -84,7 +85,9 @@ public class SoldierTest {
 
     }
 
+    /*
     @Test
-    public void 
+    public void
+    */
 
 }

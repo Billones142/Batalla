@@ -7,12 +7,13 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import battle2023.ucp.Entities.ShieldBase;
+import battle2023.ucp.Entities.ShieldRandomPercentage;
 import battle2023.ucp.Entities.Soldier;
 
 public class ShieldTest {
     @Test
     public void shield1_test(){
-        ShieldRandomPercentage shield1= new ShieldRandomPercentage();
+        ShieldRandomPercentage shield1= new ShieldRandomPercentage("peron",100.0);
 
         
         Double damage = shield1.use(5.5);
